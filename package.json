@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/solid/solid-dashboard-ui#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.2",
     "solid-client": "^0.20.0"
   },
   "devDependencies": {

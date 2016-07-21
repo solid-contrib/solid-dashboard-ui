@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script src="/build/bundle.js" charset="utf-8"></script>
@@ -16,25 +18,25 @@
 
     <nav class="navbar navbar-light bg-faded" role="navigation">
       <a class="navbar-brand" href="/">Solid</a>
-      <button class="btn btn-link pull-xs-right">Log in</button>
+      <!-- <button class="btn btn-link pull-xs-right">Log in</button> -->
+      <!-- <img class="img-circle pull-xs-right" src="/assets/img/solid-logo.svg" alt="Your profile picture" width="40"> -->
+
+      <div class="dropdown pull-xs-right">
+        <button class="btn btn-link dropdown-toggle" type="button" id="user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img class="img-circle" src="/assets/img/solid-logo.svg" alt="Your profile picture" width="30">
+          <span class="sr-only">
+            Click to expand the user menu.
+          </span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="user-dropdown">
+          <button class="btn btn-link dropdown-item">Log in</button>
+        </div>
+      </div>
     </nav>
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <!-- Only render this if the user has no webid -->
-          <div class="card">
-            <div class="card-block">
-              <h2 class="card-title">
-                <a href="https://solid.github.io/solid-signup/">Sign up</a>
-              </h2>
-              <div class="card-text">
-                Sign up for a Solid account.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="card">
             <div class="card-block">
               <h2 class="card-title">
@@ -46,7 +48,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="card">
             <div class="card-block">
               <h2 class="card-title">
