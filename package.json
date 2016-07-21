@@ -1,0 +1,26 @@
+{
+  "name": "solid-dashboard-ui",
+  "version": "0.1.0",
+  "description": "App for accessing other Solid apps",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solid/solid-dashboard-ui.git"
+  },
+  "keywords": [
+    "solid",
+    "dashboard"
+  ],
+  "author": "Daniel Friedman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solid/solid-dashboard-ui/issues"
+  },
+  "homepage": "https://github.com/solid/solid-dashboard-ui#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2"
+  }
+}
