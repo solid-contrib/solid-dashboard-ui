@@ -1,13 +1,15 @@
-import { applyMiddleware, createStore } from 'redux'
-import thunkMiddleware from 'redux-thunk'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
-import { logIn } from './actions'
-import rootReducer from './reducers'
+import App from './components/App'
+import configureStore from './configureStore'
 
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware))
+const store = configureStore()
 
-store.subscribe(() => {
-  console.log(store.getState())
-})
-
-store.dispatch(logIn())
+ReactDOM.render(
+  <Provider store={ store }>
+    <App />
+  </Provider>,
+  document.querySelector('#app-container')
+)

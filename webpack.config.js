@@ -11,7 +11,7 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel',
         query: {
-          presets: ['es2015']
+          presets: ['es2015', 'react']
         }
       },
       {
@@ -23,5 +23,6 @@ module.exports = {
   externals: {
     xhr2: 'XMLHttpRequest',
     xmlhttprequest: 'XMLHttpRequest'
-  }
+  },
+  devtool: "source-map"
 }
