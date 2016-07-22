@@ -3,7 +3,7 @@ import { combineReducers } from 'redux'
 import {
   LOG_IN_REQUEST, LOG_IN_SUCCESS, LOG_IN_FAILURE,
   logInRequest, logInSuccess, logInFailure
-} from './actions'
+} from '../actions'
 
 const initialState = {
   profile: null,
