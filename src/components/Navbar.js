@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-const Navbar = ({ picURL, onClickLogIn }) => (
+const Navbar = ({ picURL, logIn }) => (
   <nav className="navbar navbar-light bg-faded" role="navigation">
     <a className="navbar-brand" href="/">Solid</a>
     <div className="dropdown pull-xs-right">
@@ -21,14 +21,14 @@ const Navbar = ({ picURL, onClickLogIn }) => (
         </span>
       </button>
       <div className="dropdown-menu dropdown-menu-right" aria-labelledby="user-dropdown">
-        <button className="btn btn-link dropdown-item" onClick={ onClickLogIn }>Log in</button>
+        <button className="btn btn-link dropdown-item" onClick={ logIn }>Log in</button>
       </div>
     </div>
   </nav>
 )
 
 Navbar.PropTypes = {
-  onClickLogIn: PropTypes.func.isRequired,
+  logIn: PropTypes.func.isRequired,
   picURL: PropTypes.string.isRequired
 }
 

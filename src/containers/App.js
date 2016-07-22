@@ -5,14 +5,12 @@ import { bindActionCreators } from 'redux'
 import * as Actions from '../actions'
 import Navbar from '../components/Navbar'
 
-let App = ({ profile, actions }) => {
-  const picURL = profile ? profile.picURL :  "assets/img/solid-logo.svg"
-  return (
-    <div>
-      <Navbar picURL={ picURL } onClickLogIn={ actions.logIn } />
-    </div>
-  )
-}
+let App = ({ profile, actions }) => (
+  <div>
+    <Navbar picURL={ profile ? profile.picture :  "assets/img/solid-logo.svg" } logIn={ actions.logIn } />
+  </div>
+)
+
 
 App.PropTypes = {
   profile: PropTypes.object.isRequired,
