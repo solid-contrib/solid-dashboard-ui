@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-prod": "env NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
-    "build-develop": "webpack --watch"
+    "build-develop": "webpack --config webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
