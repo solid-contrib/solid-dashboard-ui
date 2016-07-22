@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
+import { logIn } from './actions'
 import App from './containers/App'
 import configureStore from './store/configureStore'
 
@@ -13,3 +14,5 @@ ReactDOM.render(
   </Provider>,
   document.querySelector('#app-container')
 )
+
+store.dispatch(logIn())

@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar'
 
 let App = ({ profile, actions }) => (
   <div>
-    <Navbar picURL={ profile.picture ||  "assets/img/solid-logo.svg" } logIn={ actions.logIn } />
+    <Navbar picURL={ profile.picture ||  "assets/img/solid-logo.svg" } />
     <Dashboard />
   </div>
 )
