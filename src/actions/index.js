@@ -9,6 +9,7 @@ export function logIn () {
     dispatch(logInRequest())
     return solid.login()
       .then(webId => solid.getProfile(webId))
+      .then(profile => profile.loadAppRegistry())
       .then(profile => dispatch(logInSuccess(profile)))
       .catch(error => dispatch(logInFailure(error)))
   }

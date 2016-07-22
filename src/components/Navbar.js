@@ -27,7 +27,7 @@ const Navbar = ({ picURL, logIn }) => (
   </nav>
 )
 
-Navbar.PropTypes = {
+Navbar.propTypes = {
   logIn: PropTypes.func.isRequired,
   picURL: PropTypes.string.isRequired
 }

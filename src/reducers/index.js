@@ -6,7 +6,7 @@ import {
 } from '../actions'
 
 const initialState = {
-  profile: null,
+  profile: {},
   isLoading: false
 }
 
@@ -23,7 +23,7 @@ function isLoading (state = false, action) {
   }
 }
 
-function profile (state = null, action) {
+function profile (state = {}, action) {
   switch (action.type) {
     case LOG_IN_SUCCESS:
       return action.profile

@@ -3,16 +3,18 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import * as Actions from '../actions'
+import Dashboard from './Dashboard'
 import Navbar from '../components/Navbar'
 
 let App = ({ profile, actions }) => (
   <div>
-    <Navbar picURL={ profile ? profile.picture :  "assets/img/solid-logo.svg" } logIn={ actions.logIn } />
+    <Navbar picURL={ profile.picture ||  "assets/img/solid-logo.svg" } logIn={ actions.logIn } />
+    <Dashboard />
   </div>
 )
 
 
-App.PropTypes = {
+App.propTypes = {
   profile: PropTypes.object.isRequired,
   actions: PropTypes.object.isRequired
 }
