@@ -28,6 +28,6 @@ export function logInSuccess (profile) {
 export function logInFailure (error) {
   return {
     type: LOG_IN_FAILURE,
-    profile: error
+    error: error
   }
 }
