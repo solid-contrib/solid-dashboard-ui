@@ -1,5 +1,6 @@
 var chai = require('chai')
 var chaiEnzyme = require('chai-enzyme')
+var sinonChai = require('sinon-chai')
 var jsdom = require('jsdom').jsdom
 
 // set up jsdom
@@ -20,3 +21,4 @@ global.navigator = {
 
 // set up chai-enzyme
 chai.use(chaiEnzyme())
+chai.use(sinonChai)

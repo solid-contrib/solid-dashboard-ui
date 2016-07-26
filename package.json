@@ -49,6 +49,8 @@
     "nyc": "^7.1.0",
     "react-addons-test-utils": "^15.2.1",
     "react-dom": "^15.2.1",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
