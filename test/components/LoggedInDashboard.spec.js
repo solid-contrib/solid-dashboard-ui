@@ -18,7 +18,12 @@ describe('LoggedInDashboard', () => {
     const dashboardWithoutStorage = shallow(
       <LoggedInDashboard profile={ profileWithoutStorage } />
     )
-    const storageCard = <Card url={ profileWithStorage.storage[0] } />
+    const storageCard =
+      <Card
+        title='Storage'
+        url={ profileWithStorage.storage[0] }
+        description='Access your files.'
+      />
 
     expect(dashboardWithStorage.containsMatchingElement(storageCard))
       .to.equal(true)
