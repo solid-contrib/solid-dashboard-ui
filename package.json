@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
     "test:develop": "mocha -w --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
-    "coverage:report": "nyc report --repoprter=text-lcov",
+    "coverage:report": "nyc report --repoprter=text-lcov --reporter=html",
     "build:production": "cross-env NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
     "develop": "webpack-dev-server"
   },
