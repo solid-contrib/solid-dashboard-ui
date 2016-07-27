@@ -1,21 +1,19 @@
+const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: __dirname + "/build",
-    publicPath: "/build/",
-    filename: "bundle.js"
+    path: path.join(__dirname, 'build'),
+    publicPath: '/build/',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015', 'react']
-        }
+        loader: 'babel'
       },
       {
         test: /\.json$/,
@@ -32,5 +30,5 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     })
   ],
-  devtool: "source-map"
+  devtool: 'source-map'
 }

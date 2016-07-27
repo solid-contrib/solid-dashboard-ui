@@ -4,9 +4,13 @@
   "description": "App for accessing other Solid apps",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-prod": "env NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
-    "build-develop": "webpack --config webpack.config.js --watch",
+    "test": "cross-env NODE_ENV=test nyc mocha --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
+    "test:develop": "mocha -w --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
+    "coverage:check": "nyc check-coverage --lines 92",
+    "coverage:report": "nyc report --repoprter=text-lcov --reporter=html",
+    "coverage:coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard --verbose",
+    "build:production": "cross-env NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
     "develop": "webpack-dev-server"
   },
   "repository": {
@@ -34,10 +38,32 @@
   "devDependencies": {
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
+    "babel-plugin-istanbul": "^1.0.3",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.5.0",
+    "coveralls": "^2.11.11",
+    "cross-env": "^2.0.0",
+    "enzyme": "^2.4.1",
+    "jsdom": "^9.4.1",
     "json-loader": "^0.5.4",
+    "mocha": "^2.5.3",
+    "nyc": "^7.1.0",
+    "proxyquire": "^1.7.10",
+    "react-addons-test-utils": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0",
+    "standard": "^7.1.2",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "sourceMap": false,
+    "instrument": false
   }
 }
