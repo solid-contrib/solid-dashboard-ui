@@ -13,7 +13,7 @@ describe('App', () => {
     expect(wrapper.containsAllMatchingElements([
       <Navbar picURL='assets/img/solid-logo.svg' />,
       <Dashboard />
-    ])).to.equal(true)
+    ])).to.be.true
   })
 
   it('passes the profile picture to the Navbar when defined', () => {
@@ -21,6 +21,6 @@ describe('App', () => {
     const wrapper = shallow(<App profile={{ picture: picURL }} />)
     expect(wrapper.containsMatchingElement(
       <Navbar picURL={ picURL } />
-    )).to.equal(true)
+    )).to.be.true
   })
 })

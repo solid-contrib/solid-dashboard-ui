@@ -6,9 +6,10 @@ import * as Actions from '../actions'
 import AnonymousDashboard from '../components/AnonymousDashboard'
 import LoggedInDashboard from '../components/LoggedInDashboard'
 
-const Dashboard = ({ profile, actions }) => {
+// export unconnected Dashboard for testing
+export const Dashboard = ({ profile, actions }) => {
   return (
-    <div className="container">
+    <div className='container'>
       { profile.isLoaded
         ? <LoggedInDashboard profile={ profile } />
         : <AnonymousDashboard logIn={ actions.logIn } /> }

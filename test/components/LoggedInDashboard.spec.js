@@ -26,7 +26,7 @@ describe('LoggedInDashboard', () => {
       />
 
     expect(dashboardWithStorage.containsMatchingElement(storageCard))
-      .to.equal(true)
+      .to.be.true
     expect(dashboardWithoutStorage.containsMatchingElement(storageCard))
       .to.equal(false)
   })
