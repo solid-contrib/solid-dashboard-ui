@@ -6,6 +6,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
     "test:develop": "mocha -w --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
+    "coverage:check": "nyc check-coverage --lines 92",
     "coverage:report": "nyc report --repoprter=text-lcov --reporter=html",
     "coverage:coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard --verbose",
