@@ -7,6 +7,7 @@
     "test": "cross-env NODE_ENV=test nyc mocha --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
     "test:develop": "mocha -w --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
     "coverage:report": "nyc report --repoprter=text-lcov --reporter=html",
+    "coverage:coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard --verbose",
     "build:production": "cross-env NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
     "develop": "webpack-dev-server"
@@ -41,6 +42,7 @@
     "babel-preset-react": "^6.11.1",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.5.0",
+    "coveralls": "^2.11.11",
     "cross-env": "^2.0.0",
     "enzyme": "^2.4.1",
     "jsdom": "^9.4.1",
