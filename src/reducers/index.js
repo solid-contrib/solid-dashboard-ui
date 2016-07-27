@@ -1,21 +1,14 @@
 import { combineReducers } from 'redux'
 
 import {
-  LOG_IN_REQUEST, LOG_IN_SUCCESS, LOG_IN_FAILURE,
-  logInRequest, logInSuccess, logInFailure
+  LOG_IN_REQUEST, LOG_IN_SUCCESS, LOG_IN_FAILURE
 } from '../actions'
 
-const initialState = {
-  profile: {},
-  isLoading: false
-}
-
-function isLoading (state = false, action) {
+export function isLoading (state = false, action) {
   switch (action.type) {
     case LOG_IN_REQUEST:
       return true
     case LOG_IN_SUCCESS:
-      return false
     case LOG_IN_FAILURE:
       return false
     default:
@@ -23,7 +16,7 @@ function isLoading (state = false, action) {
   }
 }
 
-function profile (state = {}, action) {
+export function profile (state = {}, action) {
   switch (action.type) {
     case LOG_IN_SUCCESS:
       return action.profile
