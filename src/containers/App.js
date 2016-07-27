@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar'
 // export unconnected App for testing
 export const App = ({ profile }) => (
   <div>
-    <Navbar picURL={ profile.picture || 'assets/img/solid-logo.svg' } />
+    <Navbar picURL={profile.picture || 'assets/img/solid-logo.svg'} />
     <Dashboard />
   </div>
 )

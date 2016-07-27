@@ -13,15 +13,15 @@ describe('LoggedInDashboard', () => {
     }
     const profileWithoutStorage = { storage: [] }
     const dashboardWithStorage = shallow(
-      <LoggedInDashboard profile={ profileWithStorage } />
+      <LoggedInDashboard profile={profileWithStorage} />
     )
     const dashboardWithoutStorage = shallow(
-      <LoggedInDashboard profile={ profileWithoutStorage } />
+      <LoggedInDashboard profile={profileWithoutStorage} />
     )
     const storageCard =
       <Card
         title='Storage'
-        url={ profileWithStorage.storage[0] }
+        url={profileWithStorage.storage[0]}
         description='Access your files.'
       />
 

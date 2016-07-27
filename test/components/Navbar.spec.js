@@ -8,7 +8,7 @@ import Navbar from '../../src/components/Navbar'
 describe('Navbar', () => {
   it('renders an image', () => {
     const picURL = 'http://example.com/pic.jpg'
-    const wrapper = shallow(<Navbar picURL={ picURL } />)
+    const wrapper = shallow(<Navbar picURL={picURL} />)
     expect(wrapper.find('img')).to.have.attr('src', picURL)
   })
 })

@@ -20,7 +20,7 @@ describe('App', () => {
     const picURL = 'http://example.com/pic.jpg'
     const wrapper = shallow(<App profile={{ picture: picURL }} />)
     expect(wrapper.containsMatchingElement(
-      <Navbar picURL={ picURL } />
+      <Navbar picURL={picURL} />
     )).to.be.true
   })
 })

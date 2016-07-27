@@ -7,6 +7,7 @@
     "test": "cross-env NODE_ENV=test nyc mocha --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
     "test:develop": "mocha -w --compilers js:babel-core/register test/setup.js test/**/*.spec.js",
     "coverage:report": "nyc report --repoprter=text-lcov --reporter=html",
+    "lint": "standard --verbose",
     "build:production": "cross-env NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
     "develop": "webpack-dev-server"
   },
@@ -51,6 +52,7 @@
     "react-dom": "^15.2.1",
     "sinon": "^1.17.5",
     "sinon-chai": "^2.8.0",
+    "standard": "^7.1.2",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },

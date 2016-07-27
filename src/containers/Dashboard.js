@@ -10,9 +10,9 @@ import LoggedInDashboard from '../components/LoggedInDashboard'
 export const Dashboard = ({ profile, actions }) => {
   return (
     <div className='container'>
-      { profile.isLoaded
-        ? <LoggedInDashboard profile={ profile } />
-        : <AnonymousDashboard logIn={ actions.logIn } /> }
+      {profile.isLoaded
+        ? <LoggedInDashboard profile={profile} />
+        : <AnonymousDashboard logIn={actions.logIn} />}
     </div>
   )
 }

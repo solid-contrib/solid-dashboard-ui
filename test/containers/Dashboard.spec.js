@@ -12,10 +12,10 @@ describe('Dashboard', () => {
     const profile = { isLoaded: false }
     const actions = { logIn: () => {} }
     const wrapper = shallow(
-      <Dashboard profile={ profile } actions={ actions } />
+      <Dashboard profile={profile} actions={actions} />
     )
     expect(wrapper.containsMatchingElement(
-      <AnonymousDashboard logIn={ actions.logIn } />
+      <AnonymousDashboard logIn={actions.logIn} />
     )).to.be.true
   })
 
@@ -23,10 +23,10 @@ describe('Dashboard', () => {
     const profile = { isLoaded: true }
     const actions = { logIn: () => {} }
     const wrapper = shallow(
-      <Dashboard profile={ profile } actions={ actions } />
+      <Dashboard profile={profile} actions={actions} />
     )
     expect(wrapper.containsMatchingElement(
-      <LoggedInDashboard profile={ profile } />
+      <LoggedInDashboard profile={profile} />
     )).to.be.true
   })
 })

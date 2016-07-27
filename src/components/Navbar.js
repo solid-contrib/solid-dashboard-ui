@@ -6,7 +6,7 @@ const Navbar = ({ picURL }) => (
       <a className='navbar-brand' href='/'>Solid</a>
       <img
         className='img-circle pull-xs-right'
-        src={ picURL }
+        src={picURL}
         alt='Your profile picture'
         width='30'
       />

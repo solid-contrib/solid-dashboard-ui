@@ -29,14 +29,14 @@ const LoggedInDashboard = ({ profile }) => {
         </div>
       </div>
       <div className='row'>
-        { profile.storage.length
+        {profile.storage.length
             ? <div className='col-sm-4'>
-                <Card
-                  title='Storage'
-                  url={ profile.storage[0] }
-                  description='Access your files.'
-                />
-              </div>
+              <Card
+                title='Storage'
+                url={profile.storage[0]}
+                description='Access your files.'
+              />
+            </div>
             : ''
         }
       </div>
